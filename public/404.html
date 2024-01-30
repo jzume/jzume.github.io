@@ -4,26 +4,85 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="theme-color" content="#151515">
+	<meta name="theme-color" content="#a5a5ff">
 	<title>JZUMError</title>
 	<link rel="icon" type="image/png" href="assets/jzume-a.png" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
 	<style>
-		body {
-			padding: 0;
-			margin: 0;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			text-align: center;
-			height: 100vh;
+		body, * {
+			box-sizing: border-box;
+		}
+
+		.e404 {
+			position: fixed;
+			top: 0;
+			left: 0;
 			width: 100%;
-			background-color: #151515;
-			color: #646464;
+			height: 100%;
+			z-index: 150;
+			background-color: #a5a5ff;
+			padding: 20px;
+			font-family: "Press Start 2P", monospace;
+			font-size: 0.75rem;
+			color: #a5a5ff;
+			text-transform: uppercase;
+		}
+
+		.e404-inner {
+			width: 100%;
+			height: 100%;
+			background-color: #4343e7;
+			padding: 5px;
+		}
+
+		ul {
+			list-style-type: square;
+		}
+
+		li {
+			margin-bottom: 4px;
+		}
+
+		a {
+			text-decoration: underline;
+			color: inherit;
+		}
+
+		.cmctr {
+			text-align: center;
+		}
+
+		.flashtilde {
+			animation: blinker 1.5s step-start infinite;
+		}
+
+		@keyframes blinker {
+			50% {
+				opacity: 0;
+			}
 		}
 	</style>
 </head>
 
 <body>
-	<h1>There's nothing here.</h1>
+	<div class="e404">
+		<div class="e404-inner">
+			<p class="cmctr">*** Commodore 64 Basic V2 ***</p>
+			<p class="cmctr">64K RAM System 38911 BASIC bytes free</p>
+			<p>Ready.</p>
+			<p>LOAD JZ,8</p>
+			<h1>Error 404</h1>
+			<p>We tried our tape of this content, but it didn't work.</p>
+			<p>Things you can do about it:</p>
+			<ul>
+				<li>Reset to <a href="https://jzu.me">the homepage</a>.</li>
+				<li>See this URL in the <a id="wbm" href="https://web.archive.org/web/*/https://jzu.me">Wayback
+						Machine</a>.</li>
+			</ul>
+			<p class="flashtilde">■</p>
+		</div>
+	</div>
 </body>
