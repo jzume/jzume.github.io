@@ -1,6 +1,5 @@
 tasks:
   - name: Server
-    before: npm ci
     command: npx --yes http-server -p 8080
 
 ports:
